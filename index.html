@@ -20,9 +20,10 @@
         <button v-on:click="addItem">add</button>
       </form>
       <ul>
-        <li v-for="todo in todos">
+        <li v-for="(todo, index) in todos">
           <input type="checkbox" v-model="todo.isDone" />
           <span>{{ todo.item }}</span>
+          <button v-on:click="removeItem(index)">削除</button>
         </li>
       </ul>
 

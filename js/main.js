@@ -7,12 +7,15 @@ const app = Vue.createApp({
     addItem: function () {
       // 空文字の場合は処理を抜ける
       if (this.newItem === "") return;
-      console.log("Clicked!");
       let todo = {
         item: this.newItem,
+        isDone: false,
       };
       this.todos.push(todo);
       this.newItem = "";
+    },
+    removeItem: function (index) {
+      this.todos.splice(index, 1);
     },
   },
 });
