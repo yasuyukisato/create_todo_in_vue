@@ -20,7 +20,10 @@
         <button v-on:click="addItem">add</button>
       </form>
       <ul>
-        <li v-for="todo in todos">{{ todo.item }}</li>
+        <li v-for="todo in todos">
+          <input type="checkbox" v-model="todo.isDone" />
+          <span>{{ todo.item }}</span>
+        </li>
       </ul>
 
       <!-- デバック -->
