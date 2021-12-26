@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h1>Todoリスト</h1>
 
+      <br />
+
+      <!-- form要素のsubmitイベントを抑制する
+      v-on:イベント名.イベント修飾子 -->
+      <form v-on:submit.prevent>
+        <input type="text" v-model="newItem" />
+        <button v-on:click="addItem">add</button>
+      </form>
+      <pre>{{ $data }}</pre>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
