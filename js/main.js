@@ -5,6 +5,8 @@ const app = Vue.createApp({
   }),
   methods: {
     addItem: function () {
+      // 空文字の場合は処理を抜ける
+      if (this.newItem === "") return;
       console.log("Clicked!");
       let todo = {
         item: this.newItem,
