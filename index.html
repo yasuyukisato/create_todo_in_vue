@@ -19,6 +19,11 @@
         <input type="text" v-model="newItem" />
         <button v-on:click="addItem">add</button>
       </form>
+      <ul>
+        <li v-for="todo in todos">{{ todo.item }}</li>
+      </ul>
+
+      <!-- デバック -->
       <pre>{{ $data }}</pre>
     </div>
 
